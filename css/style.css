@@ -122,6 +122,7 @@ body {
   position: relative;
 
   transition: color var(--transition-effrcts);
+ 
 }
 .site-nav .link:hover,
 .site-nav .link:focus,
@@ -142,7 +143,24 @@ body {
 
   display: block;
 }
+.link-hover::before{
+  content: "";
+  position: absolute;
+  z-index: 5;
+  width: 0;
+  height: 4px;
+  border-radius: 2px;
+  left: 50%;
+  bottom: -32.5px;
+  transform: translateX(-50%);
+  background-color: var(--accent-text-color);
 
+  display: block;
+  transition: width var(--transition-effrcts);
+}
+.link-hover:hover::before{
+  width: 100%;
+}
 .heder-site-link{
   display: flex;
   align-items: center;
