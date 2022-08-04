@@ -129,7 +129,8 @@ body {
 .site-nav .link.current {
   color: var(--accent-text-color);
 }
-.current::after{
+.current::after,
+.link-hover::before{
   content: "";
   position: absolute;
   z-index: 2;
@@ -158,7 +159,8 @@ body {
   display: block;
   transition: width var(--transition-effrcts);
 }
-.link-hover:hover::before{
+.link-hover:hover::before,
+.link-hover:focus::before{
   width: 100%;
 }
 .heder-site-link{
