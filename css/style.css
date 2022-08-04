@@ -148,7 +148,7 @@ body {
   content: "";
   position: absolute;
   z-index: 5;
-  width: 0;
+  width: 100%;
   height: 4px;
   border-radius: 2px;
   left: 50%;
@@ -157,11 +157,12 @@ body {
   background-color: var(--accent-text-color);
 
   display: block;
-  transition: width var(--transition-effrcts);
+  transition: opacity var(--transition-effrcts);
+  opacity: 0;
 }
 .link-hover:hover::before,
 .link-hover:focus::before{
-  width: 100%;
+  opacity: 1;
 }
 .heder-site-link{
   display: flex;
